@@ -13,6 +13,10 @@ $(document).ready(function(){
 		$(window).trigger('orientationchange', true);
 	};
 	
-	// your jQuery code here
-
+	$(window).load(function() {
+		$('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: "thumbnails"
+		});
+	});
 });
