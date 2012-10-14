@@ -55,10 +55,16 @@ table {
 
 /* end CSS reset */
 
+
+
 * {
 	-webkit-touch-callout: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-user-select: none;
+}
+
+body {
+	background-color: #666;
 }
 
 body.portrait #container {
@@ -66,7 +72,211 @@ body.portrait #container {
 }
 
 #container {
-	width: 100%;
-	min-height: 748px;
-	background: #666;
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	top: 50%;
+	left: 50%;
+	margin: -384px 0 0 -512px;
+	background-color: #111111;
 }
+
+#splash {
+}
+
+h1 {
+	position: absolute;
+	top: 96px;
+	right: 164px;
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 160px;
+	color: #fff;
+	text-align: right;
+}
+
+h2 {
+	position: absolute;
+	top: 224px;
+	right: 64px;
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 256px;
+	color: #fff;
+	text-align: right;
+}
+
+h3 {
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 80px;
+	color: #fff;
+}
+
+#splash h3 {
+	position: absolute;
+	top: 528px;
+	right: 160px;
+	text-align: right;
+}
+
+#menu h3 {
+	position: absolute;
+	top: 128px;
+	left: 96px;
+	text-align: left;
+}
+
+h4 {
+	position: relative;
+	top: 34px;
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 64px;
+	color: #000;
+	text-align: center;
+}
+
+h5 {
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 60px;
+	color: #fff;
+	text-align: left;
+}
+
+/* 128, 142, 112 */
+
+h5.menu1 {
+	position: absolute;
+	top: 202px;
+	left: 128px;
+}
+
+h5.menu2 {
+	position: absolute;
+	top: 266px;
+	left: 143px;
+}
+
+h5.menu3 {
+	position: absolute;
+	top: 329px;
+	left: 112px;
+}
+
+h6 {
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 24px;
+	line-height: 32px;
+	margin-bottom: 32px;
+	color: #fff;
+	text-align: center;
+}
+
+p {
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 24px;
+	line-height: 32px;
+	color: #fff;
+	text-align: left;
+}
+
+#character {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#popup {
+	position: absolute;
+	top: 64px;
+	left: 64px;
+	width: 896px;
+	height: 640px;
+	background-color: #fff;
+	-moz-box-shadow: 0 0 10px 5px rgba(0,0,0,0.20);
+	-webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.20);
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.20);
+}
+
+#options {
+	position: absolute;
+	top: 128px;
+	left: 144px;
+	width: 640px;
+	height: 480px;
+}
+
+.tile {
+	position: relative;
+	float: left;
+	width: 128px;
+	height: 128px;
+	margin: 0 16px 32px 16px;
+	background-color: red;	
+}
+
+.default {
+	position: absolute;
+}
+
+.hover {
+	position: absolute;
+	display: none;
+}
+
+.paragraph {
+	position: relative;
+	float: left;
+	width: 272px;
+	height: 540px;
+	margin: 64px 0 0 64px;
+}
+
+.illustration {
+	position: relative;
+	float: right;
+	width: 540px;
+	height: 540px;
+	margin: 64px 64px 0 0;
+}
+
+#navigation {
+	background-color: yellow;
+	position: absolute;
+	bottom: 64px;
+	left: 64px;
+	width: 894px;
+	height: 24px;
+	
+}
+
+.creditsLeft {
+	position: relative;
+	float: left;
+	width: 320px;
+	height: 384px;
+	margin: 160px 20px 0px 172px;
+}
+
+.creditsRight {
+	position: relative;
+	float: right;
+	width: 320px;
+	height: 384px;
+	margin: 160px 172px 0px 20px;
+}
+
+.creditsBottom {
+	position: absolute;
+	top: 512px;
+	width: 320px;
+	height: 384px;
+	margin: 0px 20px 0px 172px;
+}
+
+.book {
+	text-decoration: underline;
+}
+
+a { text-decoration: none; }
+a:link { color:#fff; }      
+a:visited { color: #fff;}  
+a:hover { color: #bbb; }  
+a:active { color: #bbb; } 
