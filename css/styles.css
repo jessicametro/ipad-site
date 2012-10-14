@@ -84,7 +84,7 @@ body.portrait #container {
 #splash {
 }
 
-h1 {
+h1 {  /* The Prince */
 	position: absolute;
 	top: 96px;
 	right: 164px;
@@ -94,7 +94,7 @@ h1 {
 	text-align: right;
 }
 
-h2 {
+h2 {  /* & */
 	position: absolute;
 	top: 224px;
 	right: 64px;
@@ -104,27 +104,27 @@ h2 {
 	text-align: right;
 }
 
-h3 {
+h3 {  /* [  ] */ /* The Prince & */
 	font-family: 'Goudy Bookletter 1911', serif;
 	font-size: 80px;
 	color: #fff;
 }
 
-#splash h3 {
+#splash h3 {  /* [  ] */
 	position: absolute;
 	top: 528px;
 	right: 160px;
 	text-align: right;
 }
 
-#menu h3 {
+#menu h3 {  /* The Prince & */
 	position: absolute;
 	top: 128px;
 	left: 96px;
 	text-align: left;
 }
 
-h4 {
+h4 {  /* choose three */
 	position: relative;
 	top: 34px;
 	font-family: 'Goudy Bookletter 1911', serif;
@@ -133,7 +133,7 @@ h4 {
 	text-align: center;
 }
 
-h5 {
+h5 {  /* the "item" */
 	font-family: 'Goudy Bookletter 1911', serif;
 	font-size: 60px;
 	color: #fff;
@@ -160,7 +160,7 @@ h5.menu3 {
 	left: 112px;
 }
 
-h6 {
+h6 {  /* credits */
 	font-family: 'Goudy Bookletter 1911', serif;
 	font-size: 24px;
 	line-height: 32px;
@@ -247,7 +247,7 @@ p {
 	
 }
 
-.creditsLeft {
+.creditsLeft {  /* created by */
 	position: relative;
 	float: left;
 	width: 320px;
@@ -255,7 +255,7 @@ p {
 	margin: 160px 20px 0px 172px;
 }
 
-.creditsRight {
+.creditsRight {	 /* adapted from */
 	position: relative;
 	float: right;
 	width: 320px;
@@ -263,11 +263,11 @@ p {
 	margin: 160px 172px 0px 20px;
 }
 
-.creditsBottom {
+.creditsBottom {  /* start again */
 	position: absolute;
 	top: 512px;
 	width: 320px;
-	height: 384px;
+	height: 32px;
 	margin: 0px 20px 0px 172px;
 }
 
