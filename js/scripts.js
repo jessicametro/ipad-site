@@ -15,6 +15,14 @@ $(document).ready(function(){
 	
 	goToPage("#splash");
 	
+	$(".prevChoose").click(function(){
+		goToPage("#choose");
+	});
+	
+	$(".nextFlexslider").click(function(){
+		goToPage(".flexslider");
+	});
+	
 	$('.flexslider').flexslider({
 		selector: ".slides > div",
 		animation: "slide",
@@ -27,6 +35,10 @@ $(document).ready(function(){
 		if (currentSlide == 0) {
 			goToPage("#menu");
 		}
+	});
+	
+	$(".startAgain").click(function(){
+		goToPage("#choose");
 	});
 	
 });
@@ -42,7 +54,7 @@ var goToPage = function(pageID) {
 
 $(window).load(function(){
 	window.setTimeout(function() {
-		goToPage(".flexslider");
+		goToPage("#menu");
 	}, 1000);
 });
 
