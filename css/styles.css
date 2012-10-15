@@ -63,6 +63,10 @@ table {
 	-webkit-user-select: none;
 }
 
+.page {
+	display: none;
+}
+
 body {
 	background-color: #666;
 }
@@ -221,6 +225,17 @@ p {
 	display: none;
 }
 
+/*  #hack {
+	position: absolute;
+	bottom: 28px;
+	left: 50%;
+	font-family: 'Goudy Bookletter 1911', serif;
+	font-size: 24px;
+	line-height: 32px;
+	color: #000;
+	text-align: center;
+}  */
+
 .paragraph {
 	position: relative;
 	float: left;
@@ -237,14 +252,49 @@ p {
 	margin: 64px 64px 0 0;
 }
 
+/*
 #navigation {
 	background-color: yellow;
 	position: absolute;
 	bottom: 64px;
 	left: 64px;
 	width: 894px;
+	height: 24px;	
+}
+*/
+
+.flex-control-thumbs {
+	/* background-color: gray; */
+	position: absolute;
+	bottom: 64px;
+	left: 247px;
+	width: 528px;
 	height: 24px;
-	
+}
+
+.flex-control-thumbs > li {
+	float: left;
+	margin: 0 12px 0 12px;
+}
+
+.flex-prev {
+	position: absolute;
+	bottom: 64px;
+	left: 64px;
+	width: 24px;
+	height: 24px;
+	text-indent: -9000px;
+	background-image: url("../images/thumbs/navigation-previous.png");
+}
+
+.flex-next {
+	position: absolute;
+	bottom: 64px;
+	right: 64px;
+	width: 24px;
+	height: 24px;
+	text-indent: -9000px;
+	background-image: url("../images/thumbs/navigation-next.png");
 }
 
 .creditsLeft {  /* created by */

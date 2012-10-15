@@ -13,10 +13,43 @@ $(document).ready(function(){
 		$(window).trigger('orientationchange', true);
 	};
 	
-	$(window).load(function() {
-		$('.flexslider').flexslider({
-			animation: "slide",
-			controlNav: "thumbnails"
-		});
+	goToPage("#splash");
+	
+	$('.flexslider').flexslider({
+		selector: ".slides > div",
+		animation: "slide",
+		controlNav: "thumbnails",
+		slideshow: false,  
 	});
+	
+	$(".flex-prev").click(function(){
+		var currentSlide = $('.flexslider').data('flexslider').currentSlide;
+		if (currentSlide == 0) {
+			goToPage("#menu");
+		}
+	});
+	
 });
+
+
+
+var goToPage = function(pageID) {
+	$(".page").fadeOut();
+	$(pageID).fadeIn();
+};
+
+
+
+$(window).load(function(){
+	window.setTimeout(function() {
+		goToPage(".flexslider");
+	}, 1000);
+});
+
+// goToPage("#splash");
+
+// goToPage("#choose");
+
+// goToPage("#menu");
+
+
