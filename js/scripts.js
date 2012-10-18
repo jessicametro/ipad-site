@@ -15,6 +15,8 @@ $(document).ready(function(){
 	
 	goToPage("#splash");
 	
+	/* Begin jQuery Choice */
+	
 	$(function() {
 		$("#options .tile").choice({
 			selected:function(element,list,index){
@@ -31,6 +33,8 @@ $(document).ready(function(){
 		});
 	});
 
+	/* End jQuery Choice */
+
 	$(".prevChoose").click(function(){
 		goToPage("#choose");
 	});
@@ -41,6 +45,8 @@ $(document).ready(function(){
 	});	
 	
 });
+
+/* Begin Flex Slider */
 
 var setUpFlexslider = function(){
 	$('.flexslider').flexslider({
@@ -65,7 +71,7 @@ var goToPage = function(pageID) {
 	$(pageID).fadeIn();
 };
 
-
+/* End Flex Slider */
 
 $(window).load(function(){
 	window.setTimeout(function() {
