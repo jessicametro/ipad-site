@@ -15,25 +15,31 @@ $(document).ready(function(){
 	
 	goToPage("#splash");
 	
+	
 	/* Begin jQuery Choice */
 	
 	$(function() {
-		$("#options .tile").choice({
-			selected:function(element,list,index){
-					console.log("Yay!");
-					$(element).addClass("selected");
-					$(element).find(".subtext").text(index+".");
-				},
-				unselected:function(element,list,index){
-					console.log("Awww.");
-					$(element).removeClass("selected");
-					$(element).find(".subtext").text(".");
-				},
+		$("#choose .tile").choice({
+			selected:function(element, index, list){
+				$(element).addClass("selected");
+				$(element).find(".subtext").text(index+".");
+			},
+			unselected:function(element, index, list){
+				$(element).removeClass("selected");
+				$(element).find(".subtext").text(".");
+			},
 			max: 3,
+			allselected:function() {
+				$(".status").text("All Selected.");
+			},
+			cleared:function() {
+				$(".status").text("Cleared.");
+			}
 		});
 	});
 
 	/* End jQuery Choice */
+
 
 	$(".prevChoose").click(function(){
 		goToPage("#choose");
@@ -45,6 +51,7 @@ $(document).ready(function(){
 	});	
 	
 });
+
 
 /* Begin Flex Slider */
 
@@ -72,6 +79,7 @@ var goToPage = function(pageID) {
 };
 
 /* End Flex Slider */
+
 
 $(window).load(function(){
 	window.setTimeout(function() {
