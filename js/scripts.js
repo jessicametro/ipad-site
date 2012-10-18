@@ -21,10 +21,12 @@ $(document).ready(function(){
 	$(function() {
 		$("#choose .tile").choice({
 			selected:function(element, index, list){
+				console.log("Successfully Selected");
 				$(element).addClass("selected");
 				$(element).find(".subtext").text(index+".");
 			},
 			unselected:function(element, index, list){
+				console.log("Unsuccessfully Selected");
 				$(element).removeClass("selected");
 				$(element).find(".subtext").text(".");
 			},
