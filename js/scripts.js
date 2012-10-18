@@ -55,7 +55,8 @@ $(document).ready(function(){
 	
 	$(".tocPage01").click(function(){
 		setUpFlexslider();
-		goToPage(".flexslider").flexslider(0);
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(0);
 	});
 });
 
