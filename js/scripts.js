@@ -15,6 +15,22 @@ $(document).ready(function(){
 	
 	goToPage("#splash");
 	
+	$(function() {
+		$("#options .tile").choice({
+			selected:function(element,list,index){
+					console.log("Yay!");
+					$(element).addClass("selected");
+					$(element).find(".subtext").text(index+".");
+				},
+				unselected:function(element,list,index){
+					console.log("Awww.");
+					$(element).removeClass("selected");
+					$(element).find(".subtext").text(".");
+				},
+			max: 3,
+		});
+	});
+
 	$(".prevChoose").click(function(){
 		goToPage("#choose");
 	});
