@@ -20,30 +20,29 @@ $(document).ready(function(){
 	});
 	
 	$(".nextFlexslider").click(function(){
+		setUpFlexslider();
 		goToPage(".flexslider");
-	});
+	});	
 	
+});
+
+var setUpFlexslider = function(){
 	$('.flexslider').flexslider({
 		selector: ".slides > div",
 		animation: "slide",
 		controlNav: "thumbnails",
 		slideshow: false,  
 	});
-	
 	$(".flex-prev").click(function(){
 		var currentSlide = $('.flexslider').data('flexslider').currentSlide;
 		if (currentSlide == 0) {
 			goToPage("#menu");
 		}
 	});
-	
 	$(".startAgain").click(function(){
 		goToPage("#choose");
 	});
-	
-});
-
-
+};
 
 var goToPage = function(pageID) {
 	$(".page").fadeOut();
@@ -54,7 +53,7 @@ var goToPage = function(pageID) {
 
 $(window).load(function(){
 	window.setTimeout(function() {
-		goToPage("#menu");
+		goToPage("#choose");
 	}, 1000);
 });
 
