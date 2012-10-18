@@ -16,7 +16,7 @@ $(document).ready(function(){
 	goToPage("#splash");
 	
 	
-	/* Begin jQuery Choice */
+	/* Begin: jQuery Choice */
 	
 	$(function() {
 		$("#choose .tile").choice({
@@ -41,7 +41,7 @@ $(document).ready(function(){
 		});
 	});
 
-	/* End jQuery Choice */
+	/* End: jQuery Choice */
 	
 	
 	$(".prevChoose").click(function(){
@@ -53,15 +53,81 @@ $(document).ready(function(){
 		goToPage(".flexslider");
 	});	
 	
+	
+	/* Begin: Choose a TOC Item */
+	
 	$(".tocPage01").click(function(){
 		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(0);
 	});
+	
+	$(".tocPage02").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(1);
+	});
+	
+	$(".tocPage03").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(2);
+	});
+	
+	$(".tocPage04").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(3);
+	});
+	
+	$(".tocPage05").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(4);
+	});
+	
+	$(".tocPage06").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(5);
+	});
+	
+	$(".tocPage07").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(6);
+	});
+	
+	$(".tocPage08").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(7);
+	});
+	
+	$(".tocPage09").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(8);
+	});
+	
+	$(".tocPage10").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(9);
+	});
+	
+	$(".tocPage11").click(function(){
+		setUpFlexslider();
+		goToPage(".flexslider");
+		$(".flexslider").flexslider(10);
+	});
+	
+	/* End: Choose a TOC Item */
+	
 });
 
 
-/* Begin Flex Slider */
+/* Begin: Flex Slider */
 
 var setUpFlexslider = function(){
 	$('.flexslider').flexslider({
@@ -86,7 +152,7 @@ var goToPage = function(pageID) {
 	$(pageID).fadeIn();
 };
 
-/* End Flex Slider */
+/* End: Flex Slider */
 
 
 $(window).load(function(){
