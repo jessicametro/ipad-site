@@ -26,13 +26,14 @@ $(document).ready(function(){
 				$(element).find(".subtext").text(index+".");
 			},
 			unselected:function(element, index, list){
-				console.log("Unsuccessfully Selected");
+				console.log("Successfully Unselected");
 				$(element).removeClass("selected");
 				$(element).find(".subtext").text(".");
 			},
 			max: 3,
 			allselected:function() {
 				$(".status").text("All Selected.");
+				goToPage("#menu");
 			},
 			cleared:function() {
 				$(".status").text("Cleared.");
@@ -41,7 +42,7 @@ $(document).ready(function(){
 	});
 
 	/* End jQuery Choice */
-
+	
 
 	$(".prevChoose").click(function(){
 		goToPage("#choose");
