@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 	/* End jQuery Choice */
 	
-
+	
 	$(".prevChoose").click(function(){
 		goToPage("#choose");
 	});
@@ -53,6 +53,10 @@ $(document).ready(function(){
 		goToPage(".flexslider");
 	});	
 	
+	$(".tocPage01").click(function(){
+		setUpFlexslider();
+		goToPage(0);
+	});
 });
 
 
