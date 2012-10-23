@@ -43,82 +43,73 @@ $(document).ready(function(){
 
 	/* End: jQuery Choice */
 	
+	setUpFlexslider();
 	
 	$(".prevChoose").click(function(){
 		goToPage("#choose");
 	});
 	
 	$(".nextFlexslider").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
+		$(".flexslider").flexslider(0);
 	});	
 	
 	
 	/* Begin: Choose a TOC Item */
 	
 	$(".tocPage01").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(0);
 	});
 	
 	$(".tocPage02").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(1);
 	});
 	
 	$(".tocPage03").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(2);
 	});
 	
 	$(".tocPage04").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(3);
 	});
 	
 	$(".tocPage05").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(4);
 	});
 	
 	$(".tocPage06").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(5);
 	});
 	
 	$(".tocPage07").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(6);
 	});
 	
 	$(".tocPage08").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(7);
 	});
 	
 	$(".tocPage09").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(8);
 	});
 	
 	$(".tocPage10").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
 		$(".flexslider").flexslider(9);
 	});
 	
 	$(".tocPage11").click(function(){
-		setUpFlexslider();
 		goToPage(".flexslider");
+		$(".flexslider").flexslider(1);
 		$(".flexslider").flexslider(10);
 	});
 	
@@ -135,6 +126,7 @@ var setUpFlexslider = function(){
 		animation: "slide",
 		controlNav: "thumbnails",
 		slideshow: false,  
+		animationLoop: false,
 	});
 	$(".flex-prev").click(function(){
 		var currentSlide = $('.flexslider').data('flexslider').currentSlide;
