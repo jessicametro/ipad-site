@@ -219,8 +219,12 @@ p {
 	position: absolute;
 }
 
-.hover {
+.selected {
 	position: absolute;
+	display: none;
+}
+
+.hidden {
 	display: none;
 }
 

@@ -24,13 +24,13 @@ $(document).ready(function(){
 		$("#choose .tile").choice({
 			selected:function(element, index, list){
 				console.log("Successfully Selected");
-				$(element).addClass("selected");
-				$(element).find(".subtext").text(index+".");
+				$(element).find(".selected").show();
+				var name = $(element).find(".name").text();
+				setUpSelectedText(name, index);
 			},
 			unselected:function(element, index, list){
 				console.log("Successfully Unselected");
-				$(element).removeClass("selected");
-				$(element).find(".subtext").text(".");
+				$(element).find(".selected").hide();
 			},
 			max: 3,
 			allselected:function() {
@@ -118,6 +118,18 @@ $(document).ready(function(){
 	/* End: Choose a TOC Item */
 	
 });
+
+var setUpSelectedText = function(name, position){
+	if (position == 0){
+		$(".firstItemText").text(name);
+	}
+	if (position == 1){
+		$(".secondItemText").text(name);
+	}
+	if (position == 2){
+		$(".thirdItemText").text(name);
+	}		
+};
 
 
 /* Begin: Flex Slider */
