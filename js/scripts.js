@@ -31,6 +31,8 @@ $(document).ready(function(){
 				setUpSelectedTOCThumb(url, index);	
 				var url = $(element).find(".navThumb").attr("src");
 				setUpNavThumb(url, index);
+				var url = $(element).find(".sliderIllustration").attr("src");
+				setUpSelectedIllustration(url, index);
 			},
 			unselected:function(element, index, list){
 				console.log("Successfully Unselected");
@@ -57,7 +59,7 @@ $(document).ready(function(){
 	
 	$(".nextFlexslider").click(function(){
 		goToPage(".flexslider");
-		$(".flexslider").flexslider(1); // this is a major hack
+		$(".flexslider").flexslider(1); // this is a massive hack
 		$(".flexslider").flexslider(0); 
 		console.log("Go Next!");
 	});	
@@ -67,7 +69,7 @@ $(document).ready(function(){
 	
 	$(".tocPage01").click(function(){
 		goToPage(".flexslider");
-		$(".flexslider").flexslider(1); // this is a major hack
+		$(".flexslider").flexslider(1); // this is a massive hack
 		$(".flexslider").flexslider(0); 
 	});
 	
@@ -161,6 +163,19 @@ var setUpNavThumb = function(url, position){
 	}
 	if (position == 2){
 		$(".flex-control-thumbs li:nth-child(8) img").attr("src", url);
+	}	
+};
+
+
+var setUpSelectedIllustration = function(url, position){
+	if (position == 0){
+		$(".firstObjectIllustration").attr("src", url);
+	}
+	if (position == 1){
+		$(".secondObjectIllustration").attr("src", url);
+	}
+	if (position == 2){
+		$(".thirdObjectIllustration").attr("src", url);
 	}	
 };
 
