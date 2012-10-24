@@ -121,13 +121,13 @@ $(document).ready(function(){
 
 var setUpSelectedText = function(name, position){
 	if (position == 0){
-		$(".firstItemText").text(name);
+		$(".firstObjectText").text(name);
 	}
 	if (position == 1){
-		$(".secondItemText").text(name);
+		$(".secondObjectText").text(name);
 	}
 	if (position == 2){
-		$(".thirdItemText").text(name);
+		$(".thirdObjectText").text(name);
 	}		
 };
 
