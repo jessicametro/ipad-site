@@ -181,6 +181,11 @@ p {
 	text-align: left;
 }
 
+.paragraph p {
+	display: table-cell; 
+  	vertical-align: middle; 
+}
+
 #character {
 	position: absolute;
 	bottom: 0;
@@ -298,6 +303,7 @@ p {
 .paragraph {
 	position: relative;
 	float: left;
+	display: table;
 	width: 272px;
 	height: 540px;
 	margin: 64px 0 0 64px;
