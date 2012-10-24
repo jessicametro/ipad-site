@@ -27,6 +27,10 @@ $(document).ready(function(){
 				$(element).find(".selected").show();
 				var name = $(element).find(".name").text();
 				setUpSelectedText(name, index);
+				var url = $(element).find(".tocThumb").attr("src");
+				setUpSelectedTOCThumb(url, index);	
+				var url = $(element).find(".navThumb").attr("src");
+				setUpNavThumb(url, index);
 			},
 			unselected:function(element, index, list){
 				console.log("Successfully Unselected");
@@ -129,6 +133,32 @@ var setUpSelectedText = function(name, position){
 	if (position == 2){
 		$(".thirdObjectText").text(name);
 	}		
+};
+
+
+var setUpSelectedTOCThumb = function(url, position){
+	if (position == 0){
+		$(".firstObjectTOCThumb").attr("src", url);
+	}
+	if (position == 1){
+		$(".secondObjectTOCThumb").attr("src", url);
+	}
+	if (position == 2){
+		$(".thirdObjectTOCThumb").attr("src", url);
+	}	
+};
+
+
+var setUpNavThumb = function(url, position){
+	if (position == 0){
+		$(".flex-control-thumbs li:nth-child(4) img").attr("src", url);
+	}
+	if (position == 1){
+		$(".flex-control-thumbs li:nth-child(6) img").attr("src", url);
+	}
+	if (position == 2){
+		$(".flex-control-thumbs li:nth-child(8) img").attr("src", url);
+	}	
 };
 
 
