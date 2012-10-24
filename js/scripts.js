@@ -57,7 +57,9 @@ $(document).ready(function(){
 	
 	$(".nextFlexslider").click(function(){
 		goToPage(".flexslider");
-		$(".flexslider").flexslider(0);
+		$(".flexslider").flexslider(1); // this is a major hack
+		$(".flexslider").flexslider(0); 
+		console.log("Go Next!");
 	});	
 	
 	
@@ -65,7 +67,8 @@ $(document).ready(function(){
 	
 	$(".tocPage01").click(function(){
 		goToPage(".flexslider");
-		$(".flexslider").flexslider(0);
+		$(".flexslider").flexslider(1); // this is a major hack
+		$(".flexslider").flexslider(0); 
 	});
 	
 	$(".tocPage02").click(function(){
@@ -171,6 +174,15 @@ var setUpFlexslider = function(){
 		controlNav: "thumbnails",
 		slideshow: false,  
 		animationLoop: false,
+		after:function(slide){
+			var currentSlide = $('.flexslider').data('flexslider').currentSlide;
+			if (currentSlide == 10) {
+				$(".flex-next").hide();
+			}	
+			else {
+				$(".flex-next").show();
+			}
+		},
 	});
 	$(".flex-prev").click(function(){
 		var currentSlide = $('.flexslider').data('flexslider').currentSlide;
