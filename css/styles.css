@@ -179,12 +179,15 @@ p {
 	line-height: 32px;
 	color: #fff;
 	text-align: left;
+/*	margin-top: 32px; */
 }
 
+/*
 .paragraph p {
 	display: table-cell; 
   	vertical-align: middle; 
 }
+*/
 
 #character {
 	position: absolute;
@@ -303,7 +306,7 @@ p {
 .paragraph {
 	position: relative;
 	float: left;
-	display: table;
+/*	display: table;  */
 	width: 272px;
 	height: 540px;
 	margin: 64px 0 0 64px;
