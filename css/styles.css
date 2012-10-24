@@ -325,6 +325,14 @@ p {
 	margin: 0 12px 0 12px;
 }
 
+.flex-control-thumbs img {
+	opacity: 0.7;
+}
+
+.flex-control-thumbs .flex-active {
+	opacity: 1;
+}
+
 .flex-prev {
 	position: absolute;
 	bottom: 64px;
