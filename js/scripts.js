@@ -221,7 +221,7 @@ var goToPage = function(pageID) {
 $(window).load(function(){
 	window.setTimeout(function() {
 		goToPage("#choose");
-	}, 1000);
+	}, 3000);
 });
 
 // goToPage("#splash");

@@ -82,7 +82,7 @@ body.portrait #container {
 	top: 50%;
 	left: 50%;
 	margin: -384px 0 0 -512px;
-	background-color: #111111;
+	background-color: #000000;
 }
 
 #splash {
@@ -179,7 +179,7 @@ p {
 	line-height: 32px;
 	color: #fff;
 	text-align: left;
-/*	margin-top: 32px; */
+	margin: 32px 0 0 0;
 }
 
 /*
@@ -315,6 +315,7 @@ p {
 .illustration {
 	position: relative;
 	float: right;
+	background-color: #fff;
 	width: 540px;
 	height: 540px;
 	margin: 64px 64px 0 0;
