@@ -15,12 +15,12 @@ $(document).ready(function(){
 		$(window).trigger('orientationchange', true);
 	};
 	
-	goToPage("#splash");
+	
 	
 	
 	/* Begin: jQuery Choice */
 	
-	$(function() {
+	//$(function() {
 		$("#choose .tile").choice({
 			selected:function(element, index, list){
 				console.log("Successfully Selected");
@@ -47,9 +47,46 @@ $(document).ready(function(){
 				$(".status").text("Cleared.");
 			}
 		});
-	});
+	//});
 
 	/* End: jQuery Choice */
+	
+	/* Begin: Flex Slider */
+
+var setUpFlexslider = function(){
+	$('.flexslider').flexslider({
+		selector: ".slides > div",
+		animation: "slide",
+		controlNav: "thumbnails",
+		slideshow: false,  
+		animationLoop: false,
+		after:function(slide){
+			var currentSlide = $('.flexslider').data('flexslider').currentSlide;
+			if (currentSlide == 10) {
+				$(".flex-next").hide();
+			}	
+			else {
+				$(".flex-next").show();
+			}
+		},
+	});
+	$(".flex-prev").click(function(){
+		var currentSlide = $('.flexslider').data('flexslider').currentSlide;
+		if (currentSlide == 0) {
+			goToPage("#menu");
+		}
+	});
+	$(".startAgain").click(function(){
+		goToPage("#choose");
+	});
+};
+
+var goToPage = function(pageID) {
+	$(".page").fadeOut();
+	$(pageID).fadeIn();
+};
+
+/* End: Flex Slider */
 	
 	setUpFlexslider();
 	
@@ -126,7 +163,7 @@ $(document).ready(function(){
 	
 	/* End: Choose a TOC Item */
 	
-});
+//});
 
 var setUpSelectedText = function(name, position){
 	if (position == 0){
@@ -180,45 +217,12 @@ var setUpSelectedIllustration = function(url, position){
 };
 
 
-/* Begin: Flex Slider */
-
-var setUpFlexslider = function(){
-	$('.flexslider').flexslider({
-		selector: ".slides > div",
-		animation: "slide",
-		controlNav: "thumbnails",
-		slideshow: false,  
-		animationLoop: false,
-		after:function(slide){
-			var currentSlide = $('.flexslider').data('flexslider').currentSlide;
-			if (currentSlide == 10) {
-				$(".flex-next").hide();
-			}	
-			else {
-				$(".flex-next").show();
-			}
-		},
-	});
-	$(".flex-prev").click(function(){
-		var currentSlide = $('.flexslider').data('flexslider').currentSlide;
-		if (currentSlide == 0) {
-			goToPage("#menu");
-		}
-	});
-	$(".startAgain").click(function(){
-		goToPage("#choose");
-	});
-};
-
-var goToPage = function(pageID) {
-	$(".page").fadeOut();
-	$(pageID).fadeIn();
-};
-
-/* End: Flex Slider */
 
 
-$(window).load(function(){
+
+//$(window).load(function(){
+
+	goToPage("#splash");
 	window.setTimeout(function() {
 		goToPage("#choose");
 	}, 3000);
